@@ -173,34 +173,6 @@
     margin-bottom: 6px;
 }
 
-/* 자기소개서 버튼 */
-.about_more {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 20px;
-    color: #4000FF;
-    transition: 0.5s;
-    position: relative;
-}
-.about_more:hover {
-    color: rgba(64, 0, 255, 0.5);
-}
-
-.about_more::before {
-    content: "";
-    position: absolute;
-    right: -21px;
-    top: 6px;
-    width: 13px;
-    height: 13px;
-    transition: 0.5s;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' fill='%234000FF' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.4 13L0 11.6L9.6 2H1V0H13V12H11V3.4L1.4 13Z' /%3E%3C/svg%3E%0A");
-}
-.about_more:hover::before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 13' fill='%234000FF' fill-opacity='0.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.4 13L0 11.6L9.6 2H1V0H13V12H11V3.4L1.4 13Z' /%3E%3C/svg%3E%0A");
-}
 
 /* PROJECT COMMON */
 
@@ -297,7 +269,7 @@
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .25));
 }
 
-.img_big::before {
+.before-link-sehwa {
     content: "";
     position: absolute;
     left: -79px;
@@ -322,6 +294,7 @@
     width: calc(100% - 725px);
 }
 
+/* PROJECT 02 – 큰 이미지 영역 */
 .section.project[data-anchor="project2"] .img_big {
     float: left;
     position: relative;
@@ -329,23 +302,25 @@
     justify-content: flex-start; /* 왼쪽 정렬 */
 }
 
+/* 큰 이미지 */
 .section.project[data-anchor="project2"] .img_big img {
-    width: 250px;
+    width: 284px;
     height: 730px;
     object-fit: cover;
 }
 
-/* 작은 이미지 before overlay */
-.section.project[data-anchor="project2"] .img_big::before {
-    content: "";
+/* 작은 이미지 클릭 가능 overlay (before 대체) */
+.section.project[data-anchor="project2"] .before-link-kei {
     position: absolute;
     left: 216px;
-    bottom: 0;
+    bottom: 60px;
     width: 153px;
     height: 597px;
     background: url("../images/KEI_mo.jpg") no-repeat center/cover;
+    display: block;
+    z-index: 2;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, .25));
 }
-
 /* 오른쪽 텍스트 영역 */
 .section.project[data-anchor="project2"] .right_area {
     width: 725px;
